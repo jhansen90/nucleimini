@@ -1,0 +1,196 @@
+# ====================== CRITICAL ======================
+env-file|/.env|status|200|critical|Exposed .env file (credential)
+env-dev|/.env.dev|status|200|critical|Exposed .env.dev
+env-prod|/.env.prod|status|200|critical|Exposed .env.prod
+env-backup|/.env.backup|status|200|critical|Exposed .env.backup
+env-bak|/.env.bak|status|200|critical|Exposed .env.bak
+env-old|/.env.old|status|200|critical|Exposed .env.old
+env-save|/.env.save|status|200|critical|Exposed .env.save
+env-local|/.env.local|status|200|critical|Exposed .env.local
+env-stage|/.env.stage|status|200|critical|Exposed .env.stage
+env-testing|/.env.testing|status|200|critical|Exposed .env.testing
+env-example|/.env.example|status|200|critical|Exposed .env.example
+env-txt|/.env.txt|status|200|critical|Exposed .env.txt
+git-config|/.git/config|status|200|critical|Exposed .git/config
+git-head|/.git/HEAD|status|200|critical|Exposed .git/HEAD
+git-index|/.git/index|status|200|critical|Exposed .git/index
+git-commit|/.git/COMMIT_EDITMSG|status|200|critical|Exposed .git COMMIT_EDITMSG
+svn-entries|/.svn/entries|status|200|critical|Exposed .svn/entries
+svn-wcdb|/.svn/wc.db|status|200|critical|Exposed .svn/wc.db
+hg-manifest|/.hg/store/00manifest.i|status|200|critical|Exposed Mercurial repo
+bzr-readme|/.bzr/README|status|200|critical|Exposed Bazaar repo
+htpasswd|/.htpasswd|status|200|critical|Exposed .htpasswd
+htaccess|/.htaccess|status|200|critical|Exposed .htaccess
+wp-config|/wp-config.php|status|200|critical|WordPress wp-config.php exposed
+wp-config-bak|/wp-config.php.bak|status|200|critical|wp-config.php.bak exposed
+wp-config-old|/wp-config.php.old|status|200|critical|wp-config.php.old exposed
+wp-config-save|/wp-config.php.save|status|200|critical|wp-config.php.save exposed
+wp-config-swp|/wp-config.php.swp|status|200|critical|wp-config.php.swp exposed
+wp-config-txt|/wp-config.php.txt|status|200|critical|wp-config.php.txt exposed
+config-php|/config.php|status|200|critical|config.php exposed
+config-bak|/config.php.bak|status|200|critical|config.php.bak exposed
+config-inc|/config.inc.php|status|200|critical|config.inc.php exposed
+config-joomla|/configuration.php|status|200|critical|Joomla configuration.php exposed
+settings-py|/settings.py|status|200|critical|Django settings.py exposed
+local-settings|/local_settings.py|status|200|critical|Django local_settings.py exposed
+web-config|/web.config|status|200|critical|IIS web.config exposed
+web-config-bak|/web.config.bak|status|200|critical|web.config.bak exposed
+appsettings|/appsettings.json|status|200|critical|appsettings.json exposed
+appsettings-dev|/appsettings.Development.json|status|200|critical|appsettings.Development.json exposed
+database-yml|/config/database.yml|status|200|critical|Rails database.yml exposed
+backup-sql|/backup.sql|status|200|critical|SQL backup exposed
+db-sql|/db.sql|status|200|critical|db.sql exposed
+database-sql|/database.sql|status|200|critical|database.sql exposed
+dump-sql|/dump.sql|status|200|critical|dump.sql exposed
+site-sql|/site.sql|status|200|critical|site.sql exposed
+mysql-sql|/mysql.sql|status|200|critical|mysql.sql exposed
+users-sql|/users.sql|status|200|critical|users.sql exposed
+data-sql|/data.sql|status|200|critical|data.sql exposed
+db-backup-sql|/db_backup.sql|status|200|critical|db_backup.sql exposed
+db-sqlite|/db.sqlite|status|200|critical|SQLite database exposed
+database-sqlite3|/database.sqlite3|status|200|critical|SQLite3 database exposed
+laravel-log|/storage/logs/laravel.log|status|200|critical|Laravel log exposed
+debug-log|/debug.log|status|200|critical|debug.log exposed
+error-log|/error.log|status|200|critical|error.log exposed
+errors-log|/errors.log|status|200|critical|errors.log exposed
+access-log|/access.log|status|200|critical|access.log exposed
+syslog|/var/log/syslog|status|200|critical|syslog exposed
+
+# ====================== HIGH ======================
+phpinfo|/phpinfo.php|keyword|phpinfo()|high|phpinfo() page exposed
+phpinfo2|/info.php|keyword|phpinfo()|high|info.php exposed
+phpinfo3|/php.php|keyword|phpinfo()|high|php.php exposed
+phpinfo4|/test.php|keyword|phpinfo()|high|test.php exposed
+phpinfo5|/i.php|keyword|phpinfo()|high|i.php exposed
+phpinfo6|/p.php|keyword|phpinfo()|high|p.php exposed
+phpinfo7|/inf.php|keyword|phpinfo()|high|inf.php exposed
+actuator|/actuator|status|200|high|Spring Actuator exposed
+actuator-health|/actuator/health|status|200|high|Actuator Health
+actuator-info|/actuator/info|status|200|high|Actuator Info
+actuator-env|/actuator/env|status|200|high|Actuator Env (sensitive)
+actuator-beans|/actuator/beans|status|200|high|Actuator Beans
+actuator-mappings|/actuator/mappings|status|200|high|Actuator Mappings
+actuator-heapdump|/actuator/heapdump|status|200|high|Actuator Heapdump exposed
+symfony-profiler|/_profiler/empty|status|200|high|Symfony Profiler exposed
+ignition-health|/_ignition/health-check|status|200|high|Laravel Ignition health check
+swagger|/swagger-ui.html|status|200|high|Swagger UI exposed
+swagger2|/swagger-ui/|status|200|high|Swagger UI exposed
+swagger-json|/swagger.json|status|200|high|Swagger JSON exposed
+swagger-yaml|/swagger.yaml|status|200|high|Swagger YAML exposed
+swagger-api|/api/swagger.json|status|200|high|API Swagger JSON
+api-docs|/api-docs|status|200|high|API Docs exposed
+v1-api-docs|/v1/api-docs|status|200|high|Swagger v1 API Docs
+v2-api-docs|/v2/api-docs|status|200|high|Swagger v2 API Docs
+v3-api-docs|/v3/api-docs|status|200|high|Swagger v3 API Docs
+graphql|/graphql|status|200|high|GraphQL endpoint
+graphiql|/graphiql|status|200|high|GraphiQL interface
+altair|/altair|status|200|high|Altair GraphQL client
+graphql-playground|/playground|status|200|high|GraphQL Playground exposed
+backup-zip|/backup.zip|status|200|high|backup.zip found
+backup-tar|/backup.tar|status|200|high|backup.tar found
+backup-gz|/backup.tar.gz|status|200|high|backup.tar.gz found
+backup-rar|/backup.rar|status|200|high|backup.rar found
+site-zip|/site.zip|status|200|high|site.zip found
+www-zip|/www.zip|status|200|high|www.zip found
+html-zip|/html.zip|status|200|high|html.zip found
+public-zip|/public.zip|status|200|high|public.zip found
+public-html-zip|/public_html.zip|status|200|high|public_html.zip found
+root-zip|/root.zip|status|200|high|root.zip found
+code-zip|/code.zip|status|200|high|code.zip found
+archive-zip|/archive.zip|status|200|high|archive.zip found
+html-bak|/html.bak|status|200|high|html.bak found
+web-bak|/web.bak|status|200|high|web.bak found
+bak-file|/bak|status|200|high|bak directory/file
+old-zip|/old.zip|status|200|high|old.zip found
+test-zip|/test.zip|status|200|high|test.zip found
+server-status|/server-status|status|200|high|Apache server-status
+server-info|/server-info|status|200|high|Apache server-info
+nginx-status|/nginx_status|status|200|high|Nginx status page
+elmah|/elmah.axd|status|200|high|ELMAH error log exposed
+trace-axd|/trace.axd|status|200|high|ASP.NET Trace exposed
+
+# ====================== MEDIUM ======================
+admin|/admin|status|200|medium|Admin panel found
+admin-login|/admin/login|status|200|medium|Admin login page
+administrator|/administrator|status|200|medium|Administrator panel
+adminpanel|/adminpanel|status|200|medium|Adminpanel found
+admin-area|/admin-area|status|200|medium|Admin area found
+panel|/panel|status|200|medium|Panel found
+cpanel|/cpanel|status|200|medium|cPanel found
+webmail|/webmail|status|200|medium|Webmail found
+dashboard|/dashboard|status|200|medium|Dashboard found
+manage|/manage|status|200|medium|Manage panel found
+manager|/manager|status|200|medium|Manager panel found
+wp-login|/wp-login.php|status|200|medium|WordPress Login
+wp-admin|/wp-admin|status|200|medium|WordPress Admin
+user|/user|status|200|medium|User panel found
+user-login|/user/login|status|200|medium|User login page
+users|/users|status|200|medium|Users panel found
+login|/login|status|200|medium|Login page found
+signin|/signin|status|200|medium|Signin page found
+sign-in|/sign-in|status|200|medium|Sign-in page found
+admin1|/admin1|status|200|medium|admin1 panel
+admin2|/admin2|status|200|medium|admin2 panel
+moderator|/moderator|status|200|medium|Moderator panel
+backend|/backend|status|200|medium|Backend panel
+control|/control|status|200|medium|Control panel
+console|/console|status|200|medium|Console found
+phpmyadmin|/phpmyadmin|status|200|medium|phpMyAdmin found
+pma|/pma|status|200|medium|phpMyAdmin (pma)
+myadmin|/myadmin|status|200|medium|MyAdmin found
+mysql|/mysql|status|200|medium|MySQL panel
+dbadmin|/dbadmin|status|200|medium|DB Admin panel
+adminer|/adminer.php|status|200|medium|Adminer exposed
+adminer2|/adminer|status|200|medium|Adminer found
+pgadmin|/pgadmin/|status|200|medium|pgAdmin found
+
+# ====================== LOW / INFO ======================
+robots|/robots.txt|status|200|low|robots.txt found
+sitemap|/sitemap.xml|status|200|low|sitemap.xml found
+sitemap-gz|/sitemap.xml.gz|status|200|low|sitemap.xml.gz found
+security-txt|/.well-known/security.txt|status|200|low|security.txt found
+humans|/humans.txt|status|200|low|humans.txt found
+crossdomain|/crossdomain.xml|status|200|low|crossdomain.xml found
+clientaccesspolicy|/clientaccesspolicy.xml|status|200|low|clientaccesspolicy.xml
+favicon|/favicon.ico|status|200|low|favicon.ico found
+readme|/README.md|status|200|low|README.md found
+readme-html|/README.html|status|200|low|README.html found
+changelog|/CHANGELOG.md|status|200|low|CHANGELOG.md found
+license|/LICENSE|status|200|low|LICENSE file found
+license-md|/LICENSE.md|status|200|low|LICENSE.md found
+package-json|/package.json|status|200|low|package.json exposed
+composer-json|/composer.json|status|200|low|composer.json exposed
+dockerfile|/Dockerfile|status|200|low|Dockerfile exposed
+docker-compose|/docker-compose.yml|status|200|low|docker-compose.yml exposed
+old|/old|status|200|low|Old directory
+backup|/backup|status|200|low|Backup directory
+temp|/temp|status|200|low|Temp directory
+tmp|/tmp|status|200|low|Tmp directory
+test|/test|status|200|low|Test directory
+dev|/dev|status|200|low|Dev directory
+staging|/staging|status|200|low|Staging directory
+develop|/develop|status|200|low|Develop directory
+development|/development|status|200|low|Development directory
+demo|/demo|status|200|low|Demo directory
+beta|/beta|status|200|low|Beta directory
+new|/new|status|200|low|New directory
+bak|/bak|status|200|low|Bak directory
+files|/files|status|200|low|Files directory
+upload|/upload|status|200|low|Upload directory
+uploads|/uploads|status|200|low|Uploads directory
+assets|/assets|status|200|low|Assets directory
+static|/static|status|200|low|Static directory
+media|/media|status|200|low|Media directory
+images|/images|status|200|low|Images directory
+img|/img|status|200|low|Img directory
+css|/css|status|200|low|CSS directory
+js|/js|status|200|low|JS directory
+includes|/includes|status|200|low|Includes directory
+include|/include|status|200|low|Include directory
+vendor|/vendor|status|200|low|Vendor directory
+node-modules|/node_modules|status|200|low|node_modules exposed
+.git|/ .git|status|200|low|.git directory (check manually)
+svn|/.svn|status|200|low|.svn directory
+hg|/.hg|status|200|low|.hg directory
+ds-store|/.DS_Store|status|200|low|.DS_Store file
+thumbs|/Thumbs.db|status|200|low|Thumbs.db file
