@@ -55,6 +55,23 @@ error-log|/error.log|status|200|critical|error.log exposed
 errors-log|/errors.log|status|200|critical|errors.log exposed
 access-log|/access.log|status|200|critical|access.log exposed
 syslog|/var/log/syslog|status|200|critical|syslog exposed
+env-production|/.env.production|status|200|critical|Exposed production environment file
+env-development|/.env.development|status|200|critical|Exposed development environment file
+env-preprod|/.env.preprod|status|200|critical|Exposed pre-production environment file
+env-uat|/.env.uat|status|200|critical|Exposed UAT environment file
+env-ci|/.env.ci|status|200|critical|Exposed CI environment file
+env-test|/.env.test|status|200|critical|Exposed test environment file
+npmrc|/.npmrc|status|200|critical|Exposed npm configuration
+pypirc|/.pypirc|status|200|critical|Exposed Python package configuration
+dockercfg|/.dockercfg|status|200|critical|Exposed Docker registry configuration
+docker-config|/.docker/config.json|status|200|critical|Exposed Docker configuration
+aws-credentials|/.aws/credentials|status|200|critical|Exposed AWS credentials file
+aws-config|/.aws/config|status|200|critical|Exposed AWS configuration
+kube-config|/.kube/config|status|200|critical|Exposed Kubernetes configuration
+git-description|/.git/description|status|200|critical|Exposed Git repository metadata
+git-packed-refs|/.git/packed-refs|status|200|critical|Exposed Git packed references
+git-refs-master|/.git/refs/heads/master|status|200|critical|Exposed Git master reference
+git-refs-main|/.git/refs/heads/main|status|200|critical|Exposed Git main reference
 
 # ====================== HIGH ======================
 phpinfo|/phpinfo.php|keyword|phpinfo()|high|phpinfo() page exposed
@@ -108,6 +125,36 @@ server-info|/server-info|status|200|high|Apache server-info
 nginx-status|/nginx_status|status|200|high|Nginx status page
 elmah|/elmah.axd|status|200|high|ELMAH error log exposed
 trace-axd|/trace.axd|status|200|high|ASP.NET Trace exposed
+actuator-configprops|/actuator/configprops|status|200|high|Spring Actuator configuration properties exposed
+actuator-threaddump|/actuator/threaddump|status|200|high|Spring Actuator thread dump exposed
+actuator-loggers|/actuator/loggers|status|200|high|Spring Actuator loggers endpoint exposed
+actuator-metrics|/actuator/metrics|status|200|high|Spring Actuator metrics endpoint exposed
+actuator-prometheus|/actuator/prometheus|status|200|high|Prometheus metrics endpoint exposed
+heapdump|/heapdump|status|200|high|Heap dump endpoint exposed
+jolokia|/jolokia|status|200|high|Jolokia management endpoint exposed
+jmx-console|/jmx-console/|status|200|high|JMX console exposed
+web-console|/web-console/|status|200|high|Web management console exposed
+debug|/debug|status|200|high|Debug endpoint exposed
+debug-toolbar|/__debug__/|status|200|high|Django debug toolbar exposed
+laravel-telescope|/telescope|status|200|high|Laravel Telescope exposed
+laravel-horizon|/horizon|status|200|high|Laravel Horizon exposed
+openapi-json|/openapi.json|status|200|high|OpenAPI specification exposed
+openapi-yaml|/openapi.yaml|status|200|high|OpenAPI YAML specification exposed
+redoc|/redoc|status|200|high|ReDoc API documentation exposed
+api-docs-json|/api/docs|status|200|high|API documentation endpoint exposed
+backup-7z|/backup.7z|status|200|high|7z backup archive exposed
+backup-bz2|/backup.tar.bz2|status|200|high|Bzip2 backup archive exposed
+backup-xz|/backup.tar.xz|status|200|high|XZ backup archive exposed
+source-zip|/source.zip|status|200|high|Source code archive exposed
+source-tar|/source.tar|status|200|high|Source code archive exposed
+source-gz|/source.tar.gz|status|200|high|Source code archive exposed
+project-zip|/project.zip|status|200|high|Project archive exposed
+release-zip|/release.zip|status|200|high|Release archive exposed
+backup-old|/backup.old|status|200|high|Old backup file exposed
+backup-bak|/backup.bak|status|200|high|Backup file exposed
+database-bak|/database.bak|status|200|high|Database backup exposed
+database-sql-bak|/database.sql.bak|status|200|high|SQL backup exposed
+
 
 # ====================== MEDIUM ======================
 admin|/admin|status|200|medium|Admin panel found
@@ -143,6 +190,24 @@ dbadmin|/dbadmin|status|200|medium|DB Admin panel
 adminer|/adminer.php|status|200|medium|Adminer exposed
 adminer2|/adminer|status|200|medium|Adminer found
 pgadmin|/pgadmin/|status|200|medium|pgAdmin found
+account|/account|status|200|medium|Account endpoint found
+accounts|/accounts|status|200|medium|Accounts endpoint found
+profile|/profile|status|200|medium|Profile endpoint found
+settings|/settings|status|200|medium|Settings endpoint found
+config|/config|status|200|medium|Configuration endpoint found
+control-panel|/control-panel|status|200|medium|Control panel found
+admin-dashboard|/admin/dashboard|status|200|medium|Admin dashboard found
+auth|/auth|status|200|medium|Authentication endpoint found
+oauth|/oauth|status|200|medium|OAuth endpoint found
+oauth-token|/oauth/token|status|200|medium|OAuth token endpoint found
+api|/api|status|200|medium|API endpoint found
+api-v1|/api/v1|status|200|medium|API v1 endpoint found
+api-v2|/api/v2|status|200|medium|API v2 endpoint found
+graphql-api|/api/graphql|status|200|medium|GraphQL API endpoint found
+swagger-ui|/swagger|status|200|medium|Swagger interface found
+docs|/docs|status|200|medium|API documentation endpoint found
+documentation|/documentation|status|200|medium|Documentation endpoint found
+
 
 # ====================== LOW / INFO ======================
 robots|/robots.txt|status|200|low|robots.txt found
@@ -194,3 +259,38 @@ svn|/.svn|status|200|low|.svn directory
 hg|/.hg|status|200|low|.hg directory
 ds-store|/.DS_Store|status|200|low|.DS_Store file
 thumbs|/Thumbs.db|status|200|low|Thumbs.db file
+security|/security.txt|status|200|low|security.txt found
+well-known|/.well-known/|status|200|low|.well-known directory found
+asset-manifest|/asset-manifest.json|status|200|low|Asset manifest exposed
+manifest|/manifest.json|status|200|low|Web manifest exposed
+package-lock|/package-lock.json|status|200|low|package-lock.json exposed
+yarn-lock|/yarn.lock|status|200|low|yarn.lock exposed
+pnpm-lock|/pnpm-lock.yaml|status|200|low|pnpm-lock.yaml exposed
+gemfile|/Gemfile|status|200|low|Gemfile exposed
+gemfile-lock|/Gemfile.lock|status|200|low|Gemfile.lock exposed
+requirements|/requirements.txt|status|200|low|requirements.txt exposed
+pipfile|/Pipfile|status|200|low|Pipfile exposed
+pipfile-lock|/Pipfile.lock|status|200|low|Pipfile.lock exposed
+go-mod|/go.mod|status|200|low|Go module definition exposed
+go-sum|/go.sum|status|200|low|Go dependency checksums exposed
+composer-lock|/composer.lock|status|200|low|Composer lock file exposed
+nuxt-config|/nuxt.config.js|status|200|low|Nuxt configuration exposed
+vite-config|/vite.config.js|status|200|low|Vite configuration exposed
+webpack-config|/webpack.config.js|status|200|low|Webpack configuration exposed
+tsconfig|/tsconfig.json|status|200|low|TypeScript configuration exposed
+babel-config|/.babelrc|status|200|low|Babel configuration exposed
+editorconfig|/.editorconfig|status|200|low|Editor configuration exposed
+gitignore|/.gitignore|status|200|low|Gitignore file exposed
+dockerignore|/.dockerignore|status|200|low|Dockerignore file exposed
+npmignore|/.npmignore|status|200|low|npmignore file exposed
+backups|/backups|status|200|low|Backups directory found
+logs|/logs|status|200|low|Logs directory found
+cache|/cache|status|200|low|Cache directory found
+public|/public|status|200|low|Public directory found
+private|/private|status|200|low|Private directory found
+config-dir|/config/|status|200|low|Configuration directory found
+src|/src|status|200|low|Source directory found
+source|/source|status|200|low|Source directory found
+dist|/dist|status|200|low|Distribution directory found
+build|/build|status|200|low|Build directory found
+cgi-bin|/cgi-bin/|status|200|low|CGI directory found
