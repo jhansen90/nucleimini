@@ -90,12 +90,25 @@ def is_same_as_baseline(sig, baselines):
     for b in baselines:
         if not b:
             continue
-        # Status sama + panjang mirip (±15%) + hash sama → dianggap sama
         if sig["status"] == b["status"]:
             if abs(sig["length"] - b["length"]) < max(150, b["length"] * 0.15):
                 if sig["hash"] == b["hash"]:
                     return True
     return False
+
+def is_reachable(url, timeout=5):
+    """Cek apakah website bisa diakses. Return True jika reachable."""
+    try:
+        r = requests.get(
+            url,
+            headers=headers,
+            timeout=timeout,
+            verify=False,
+            allow_redirects=False
+        )
+        return True
+    except Exception:
+        return False
 
 def save_findings(findings, output_file, target_url=None, mode="single"):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -131,6 +144,16 @@ def save_findings(findings, output_file, target_url=None, mode="single"):
         f.write("=" * 70 + "\n\n")
 
 def scan(url, templates, silent=False, output_file=None, strict=True):
+    # === Cek apakah website bisa diakses dulu ===
+    if not is_reachable(url, timeout=5):
+        if not silent:
+            print(f"{Fore.RED}[!] Website tidak bisa diakses → SKIP{Style.RESET_ALL}")
+            print(f"    └─ {url}\n")
+        else:
+            # Untuk mass scan biar tetap muncul pesan skip
+            print(f"{Fore.RED}    └─ Tidak bisa diakses → SKIP{Style.RESET_ALL}")
+        return []
+
     if not silent:
         print(f"{Fore.BLUE}[*] Target         : {url}{Style.RESET_ALL}")
         print(f"{Fore.BLUE}[*] Total Template  : {len(templates)}{Style.RESET_ALL}")
@@ -170,7 +193,6 @@ def scan(url, templates, silent=False, output_file=None, strict=True):
             # --- Matching Logic yang lebih ketat ---
             if template["type"] == "status":
                 if str(r.status_code) == template["value"]:
-                    # Hanya terima jika BUKAN soft-404 / sama dengan baseline
                     if not strict or not is_same_as_baseline(sig, baselines):
                         found = True
 
@@ -178,8 +200,7 @@ def scan(url, templates, silent=False, output_file=None, strict=True):
                 keyword = template["value"].lower().strip()
                 body = r.text.lower() if r.text else ""
                 if keyword and keyword in body:
-                    # Extra check: keyword tidak terlalu generik + response berbeda
-                    if len(keyword) >= 4:          # hindari keyword terlalu pendek
+                    if len(keyword) >= 4:
                         if not strict or not is_same_as_baseline(sig, baselines):
                             found = True
 
@@ -276,6 +297,7 @@ def main():
 
         total_findings = 0
         targets_with_findings = 0
+        skipped = 0
 
         for i, raw_target in enumerate(targets, 1):
             url = cek_target(raw_target)
@@ -285,7 +307,12 @@ def main():
             print(f"{Fore.MAGENTA}[{i}/{len(targets)}] Scanning → {url}{Style.RESET_ALL}")
             findings = scan(url, templates, silent=True, output_file=None, strict=strict)
 
-            if findings:
+            if findings is None:  # jaga-jaga
+                findings = []
+
+            if not findings and not is_reachable(url, timeout=3):  # double check untuk hitung skip
+                skipped += 1
+            elif findings:
                 total_findings += len(findings)
                 targets_with_findings += 1
                 save_findings(findings, output_file, target_url=url, mode="mass")
@@ -298,6 +325,7 @@ def main():
         print(f"{Fore.GREEN}[✓] Mass Scan Selesai!{Style.RESET_ALL}")
         print(f"    Total Target dipindai : {len(targets)}")
         print(f"    Target yang vulnerabel: {targets_with_findings}")
+        print(f"    Target di-skip        : {skipped}")
         print(f"    Total temuan          : {total_findings}")
         print(f"    Hasil disimpan di     : {output_file}")
         print("=" * 60)

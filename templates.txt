@@ -11,10 +11,47 @@ env-stage|/.env.stage|status|200|critical|Exposed .env.stage
 env-testing|/.env.testing|status|200|critical|Exposed .env.testing
 env-example|/.env.example|status|200|critical|Exposed .env.example
 env-txt|/.env.txt|status|200|critical|Exposed .env.txt
+env-production|/.env.production|status|200|critical|Exposed production environment file
+env-development|/.env.development|status|200|critical|Exposed development environment file
+env-preprod|/.env.preprod|status|200|critical|Exposed pre-production environment file
+env-uat|/.env.uat|status|200|critical|Exposed UAT environment file
+env-ci|/.env.ci|status|200|critical|Exposed CI environment file
+env-test|/.env.test|status|200|critical|Exposed test environment file
+env-staging|/.env.staging|status|200|critical|Exposed staging environment file
+env-rc|/.env.rc|status|200|critical|Exposed release candidate env
+env-dist|/.env.dist|status|200|critical|Exposed dist environment file
+env-sample|/.env.sample|status|200|critical|Exposed .env.sample
+env-template|/.env.template|status|200|critical|Exposed .env.template
+env-default|/.env.default|status|200|critical|Exposed .env.default
+env-docker|/.env.docker|status|200|critical|Exposed Docker env file
+env-secret|/.env.secret|status|200|critical|Exposed secret env file
+env-secrets|/.env.secrets|status|200|critical|Exposed secrets env file
+env-vault|/.env.vault|status|200|critical|Exposed vault env file
+env-backup2|/.env~|status|200|critical|Exposed editor backup .env~
+env-swp|/.env.swp|status|200|critical|Exposed vim swap .env
+env-swo|/.env.swo|status|200|critical|Exposed vim swap .env.swo
+env-orig|/.env.orig|status|200|critical|Exposed original .env
+env-copy|/.env.copy|status|200|critical|Exposed .env.copy
+env-tmp|/.env.tmp|status|200|critical|Exposed temporary .env
+env-1|/.env.1|status|200|critical|Exposed numbered .env
+env-2|/.env.2|status|200|critical|Exposed numbered .env.2
+env-old2|/.env.old.1|status|200|critical|Exposed old numbered env
+env-prod-local|/.env.production.local|status|200|critical|Exposed production local env
+env-dev-local|/.env.development.local|status|200|critical|Exposed development local env
+env-test-local|/.env.test.local|status|200|critical|Exposed test local env
 git-config|/.git/config|status|200|critical|Exposed .git/config
 git-head|/.git/HEAD|status|200|critical|Exposed .git/HEAD
 git-index|/.git/index|status|200|critical|Exposed .git/index
 git-commit|/.git/COMMIT_EDITMSG|status|200|critical|Exposed .git COMMIT_EDITMSG
+git-description|/.git/description|status|200|critical|Exposed Git repository metadata
+git-packed-refs|/.git/packed-refs|status|200|critical|Exposed Git packed references
+git-refs-master|/.git/refs/heads/master|status|200|critical|Exposed Git master reference
+git-refs-main|/.git/refs/heads/main|status|200|critical|Exposed Git main reference
+git-logs-head|/.git/logs/HEAD|status|200|critical|Exposed Git logs HEAD
+git-info-refs|/.git/info/refs|status|200|critical|Exposed Git info refs
+git-objects|/.git/objects/|status|200|critical|Exposed Git objects directory
+git-credentials|/.git-credentials|status|200|critical|Exposed Git credentials
+git-config-bak|/.git/config.bak|status|200|critical|Exposed Git config backup
 svn-entries|/.svn/entries|status|200|critical|Exposed .svn/entries
 svn-wcdb|/.svn/wc.db|status|200|critical|Exposed .svn/wc.db
 hg-manifest|/.hg/store/00manifest.i|status|200|critical|Exposed Mercurial repo
@@ -27,6 +64,9 @@ wp-config-old|/wp-config.php.old|status|200|critical|wp-config.php.old exposed
 wp-config-save|/wp-config.php.save|status|200|critical|wp-config.php.save exposed
 wp-config-swp|/wp-config.php.swp|status|200|critical|wp-config.php.swp exposed
 wp-config-txt|/wp-config.php.txt|status|200|critical|wp-config.php.txt exposed
+wp-config-orig|/wp-config.php.orig|status|200|critical|wp-config.php.orig exposed
+wp-config-dist|/wp-config-sample.php|status|200|critical|WordPress sample config
+wp-config-tilde|/wp-config.php~|status|200|critical|Editor backup wp-config
 config-php|/config.php|status|200|critical|config.php exposed
 config-bak|/config.php.bak|status|200|critical|config.php.bak exposed
 config-inc|/config.inc.php|status|200|critical|config.inc.php exposed
@@ -37,7 +77,10 @@ web-config|/web.config|status|200|critical|IIS web.config exposed
 web-config-bak|/web.config.bak|status|200|critical|web.config.bak exposed
 appsettings|/appsettings.json|status|200|critical|appsettings.json exposed
 appsettings-dev|/appsettings.Development.json|status|200|critical|appsettings.Development.json exposed
+appsettings-prod|/appsettings.Production.json|status|200|critical|appsettings.Production.json exposed
+appsettings-local|/appsettings.Local.json|status|200|critical|appsettings.Local.json exposed
 database-yml|/config/database.yml|status|200|critical|Rails database.yml exposed
+secrets-yml|/config/secrets.yml|status|200|critical|Rails secrets.yml exposed
 backup-sql|/backup.sql|status|200|critical|SQL backup exposed
 db-sql|/db.sql|status|200|critical|db.sql exposed
 database-sql|/database.sql|status|200|critical|database.sql exposed
@@ -55,12 +98,6 @@ error-log|/error.log|status|200|critical|error.log exposed
 errors-log|/errors.log|status|200|critical|errors.log exposed
 access-log|/access.log|status|200|critical|access.log exposed
 syslog|/var/log/syslog|status|200|critical|syslog exposed
-env-production|/.env.production|status|200|critical|Exposed production environment file
-env-development|/.env.development|status|200|critical|Exposed development environment file
-env-preprod|/.env.preprod|status|200|critical|Exposed pre-production environment file
-env-uat|/.env.uat|status|200|critical|Exposed UAT environment file
-env-ci|/.env.ci|status|200|critical|Exposed CI environment file
-env-test|/.env.test|status|200|critical|Exposed test environment file
 npmrc|/.npmrc|status|200|critical|Exposed npm configuration
 pypirc|/.pypirc|status|200|critical|Exposed Python package configuration
 dockercfg|/.dockercfg|status|200|critical|Exposed Docker registry configuration
@@ -68,10 +105,69 @@ docker-config|/.docker/config.json|status|200|critical|Exposed Docker configurat
 aws-credentials|/.aws/credentials|status|200|critical|Exposed AWS credentials file
 aws-config|/.aws/config|status|200|critical|Exposed AWS configuration
 kube-config|/.kube/config|status|200|critical|Exposed Kubernetes configuration
-git-description|/.git/description|status|200|critical|Exposed Git repository metadata
-git-packed-refs|/.git/packed-refs|status|200|critical|Exposed Git packed references
-git-refs-master|/.git/refs/heads/master|status|200|critical|Exposed Git master reference
-git-refs-main|/.git/refs/heads/main|status|200|critical|Exposed Git main reference
+id-rsa|/.ssh/id_rsa|status|200|critical|Exposed SSH private key
+id-ed25519|/.ssh/id_ed25519|status|200|critical|Exposed SSH ed25519 private key
+id-ecdsa|/.ssh/id_ecdsa|status|200|critical|Exposed SSH ECDSA private key
+authorized-keys|/.ssh/authorized_keys|status|200|critical|Exposed authorized_keys
+known-hosts|/.ssh/known_hosts|status|200|critical|Exposed known_hosts
+terraform-tfstate|/terraform.tfstate|status|200|critical|Exposed Terraform state (secrets)
+terraform-tfstate-backup|/terraform.tfstate.backup|status|200|critical|Exposed Terraform state backup
+tfvars|/terraform.tfvars|status|200|critical|Exposed Terraform variables
+tfvars-prod|/prod.tfvars|status|200|critical|Exposed production tfvars
+tfvars-secret|/secret.tfvars|status|200|critical|Exposed secret tfvars
+terraform-dir|/.terraform/|status|200|critical|Exposed Terraform directory
+credentials-json|/credentials.json|status|200|critical|Exposed credentials.json
+service-account|/service-account.json|status|200|critical|Exposed Google service account
+sa-json|/sa.json|status|200|critical|Exposed service account JSON
+firebase-json|/firebase.json|status|200|critical|Exposed Firebase config
+google-credentials|/google-credentials.json|status|200|critical|Exposed Google credentials
+azure-json|/azure.json|status|200|critical|Exposed Azure credentials
+netrc|/.netrc|status|200|critical|Exposed .netrc credentials
+pgpass|/.pgpass|status|200|critical|Exposed PostgreSQL password file
+my-cnf|/.my.cnf|status|200|critical|Exposed MySQL config with password
+composer-auth|/auth.json|status|200|critical|Exposed Composer auth
+gem-credentials|/.gem/credentials|status|200|critical|Exposed RubyGems credentials
+cargo-credentials|/.cargo/credentials|status|200|critical|Exposed Cargo credentials
+pip-conf|/.pip/pip.conf|status|200|critical|Exposed pip configuration
+travis-yml|/.travis.yml|status|200|critical|Exposed Travis CI config
+circleci-config|/.circleci/config.yml|status|200|critical|Exposed CircleCI config
+github-workflows|/.github/workflows/|status|200|critical|Exposed GitHub Actions workflows
+gitlab-ci|/.gitlab-ci.yml|status|200|critical|Exposed GitLab CI config
+bitbucket-pipelines|/bitbucket-pipelines.yml|status|200|critical|Exposed Bitbucket pipelines
+azure-pipelines|/azure-pipelines.yml|status|200|critical|Exposed Azure Pipelines
+jenkinsfile|/Jenkinsfile|status|200|critical|Exposed Jenkinsfile
+dockerfile-secret|/Dockerfile.secret|status|200|critical|Exposed secret Dockerfile
+docker-compose-override|/docker-compose.override.yml|status|200|critical|Exposed docker-compose override
+kubernetes-secret|/secret.yaml|status|200|critical|Exposed Kubernetes secret
+helm-values|/values.yaml|status|200|critical|Exposed Helm values
+ansible-vault|/group_vars/all/vault.yml|status|200|critical|Exposed Ansible vault
+vault-token|/.vault-token|status|200|critical|Exposed Vault token
+sops-yaml|/.sops.yaml|status|200|critical|Exposed SOPS config
+age-key|/age.key|status|200|critical|Exposed age encryption key
+private-key|/private.key|status|200|critical|Exposed private key
+server-key|/server.key|status|200|critical|Exposed server private key
+ssl-key|/ssl.key|status|200|critical|Exposed SSL private key
+cert-key|/cert.key|status|200|critical|Exposed certificate key
+pem-key|/key.pem|status|200|critical|Exposed PEM key
+p12-file|/cert.p12|status|200|critical|Exposed PKCS12 certificate
+jks-file|/keystore.jks|status|200|critical|Exposed Java keystore
+kdbx|/passwords.kdbx|status|200|critical|Exposed KeePass database
+wp-config-inc|/wp-config.inc|status|200|critical|WordPress include config
+local-php|/local.php|status|200|critical|Local PHP config
+parameters-yml|/app/config/parameters.yml|status|200|critical|Symfony parameters
+parameters-php|/app/config/parameters.php|status|200|critical|Symfony parameters PHP
+application-yml|/application.yml|status|200|critical|Spring application.yml
+application-properties|/application.properties|status|200|critical|Spring application.properties
+bootstrap-yml|/bootstrap.yml|status|200|critical|Spring bootstrap.yml
+settings-local|/settings.local.php|status|200|critical|Drupal settings.local.php
+sites-default|/sites/default/settings.php|status|200|critical|Drupal settings.php
+config-json|/config.json|status|200|critical|Generic config.json
+config-yml|/config.yml|status|200|critical|Generic config.yml
+config-yaml|/config.yaml|status|200|critical|Generic config.yaml
+secrets-json|/secrets.json|status|200|critical|Exposed secrets.json
+secrets-yml|/secrets.yml|status|200|critical|Exposed secrets.yml
+.env.prod.local|/.env.prod.local|status|200|critical|Exposed prod local env
+.env.staging.local|/.env.staging.local|status|200|critical|Exposed staging local env
 
 # ====================== HIGH ======================
 phpinfo|/phpinfo.php|keyword|phpinfo()|high|phpinfo() page exposed
@@ -81,6 +177,8 @@ phpinfo4|/test.php|keyword|phpinfo()|high|test.php exposed
 phpinfo5|/i.php|keyword|phpinfo()|high|i.php exposed
 phpinfo6|/p.php|keyword|phpinfo()|high|p.php exposed
 phpinfo7|/inf.php|keyword|phpinfo()|high|inf.php exposed
+phpinfo8|/phpinfo|keyword|phpinfo()|high|phpinfo endpoint
+phpinfo9|/info|keyword|phpinfo()|high|info endpoint
 actuator|/actuator|status|200|high|Spring Actuator exposed
 actuator-health|/actuator/health|status|200|high|Actuator Health
 actuator-info|/actuator/info|status|200|high|Actuator Info
@@ -88,6 +186,12 @@ actuator-env|/actuator/env|status|200|high|Actuator Env (sensitive)
 actuator-beans|/actuator/beans|status|200|high|Actuator Beans
 actuator-mappings|/actuator/mappings|status|200|high|Actuator Mappings
 actuator-heapdump|/actuator/heapdump|status|200|high|Actuator Heapdump exposed
+actuator-configprops|/actuator/configprops|status|200|high|Spring Actuator configuration properties exposed
+actuator-threaddump|/actuator/threaddump|status|200|high|Spring Actuator thread dump exposed
+actuator-loggers|/actuator/loggers|status|200|high|Spring Actuator loggers endpoint exposed
+actuator-metrics|/actuator/metrics|status|200|high|Spring Actuator metrics endpoint exposed
+actuator-prometheus|/actuator/prometheus|status|200|high|Prometheus metrics endpoint exposed
+actuator-gateway|/actuator/gateway|status|200|high|Spring Cloud Gateway actuator
 symfony-profiler|/_profiler/empty|status|200|high|Symfony Profiler exposed
 ignition-health|/_ignition/health-check|status|200|high|Laravel Ignition health check
 swagger|/swagger-ui.html|status|200|high|Swagger UI exposed
@@ -99,6 +203,10 @@ api-docs|/api-docs|status|200|high|API Docs exposed
 v1-api-docs|/v1/api-docs|status|200|high|Swagger v1 API Docs
 v2-api-docs|/v2/api-docs|status|200|high|Swagger v2 API Docs
 v3-api-docs|/v3/api-docs|status|200|high|Swagger v3 API Docs
+openapi-json|/openapi.json|status|200|high|OpenAPI specification exposed
+openapi-yaml|/openapi.yaml|status|200|high|OpenAPI YAML specification exposed
+redoc|/redoc|status|200|high|ReDoc API documentation exposed
+api-docs-json|/api/docs|status|200|high|API documentation endpoint exposed
 graphql|/graphql|status|200|high|GraphQL endpoint
 graphiql|/graphiql|status|200|high|GraphiQL interface
 altair|/altair|status|200|high|Altair GraphQL client
@@ -107,6 +215,9 @@ backup-zip|/backup.zip|status|200|high|backup.zip found
 backup-tar|/backup.tar|status|200|high|backup.tar found
 backup-gz|/backup.tar.gz|status|200|high|backup.tar.gz found
 backup-rar|/backup.rar|status|200|high|backup.rar found
+backup-7z|/backup.7z|status|200|high|7z backup archive exposed
+backup-bz2|/backup.tar.bz2|status|200|high|Bzip2 backup archive exposed
+backup-xz|/backup.tar.xz|status|200|high|XZ backup archive exposed
 site-zip|/site.zip|status|200|high|site.zip found
 www-zip|/www.zip|status|200|high|www.zip found
 html-zip|/html.zip|status|200|high|html.zip found
@@ -115,21 +226,25 @@ public-html-zip|/public_html.zip|status|200|high|public_html.zip found
 root-zip|/root.zip|status|200|high|root.zip found
 code-zip|/code.zip|status|200|high|code.zip found
 archive-zip|/archive.zip|status|200|high|archive.zip found
+source-zip|/source.zip|status|200|high|Source code archive exposed
+source-tar|/source.tar|status|200|high|Source code archive exposed
+source-gz|/source.tar.gz|status|200|high|Source code archive exposed
+project-zip|/project.zip|status|200|high|Project archive exposed
+release-zip|/release.zip|status|200|high|Release archive exposed
 html-bak|/html.bak|status|200|high|html.bak found
 web-bak|/web.bak|status|200|high|web.bak found
 bak-file|/bak|status|200|high|bak directory/file
 old-zip|/old.zip|status|200|high|old.zip found
 test-zip|/test.zip|status|200|high|test.zip found
+backup-old|/backup.old|status|200|high|Old backup file exposed
+backup-bak|/backup.bak|status|200|high|Backup file exposed
+database-bak|/database.bak|status|200|high|Database backup exposed
+database-sql-bak|/database.sql.bak|status|200|high|SQL backup exposed
 server-status|/server-status|status|200|high|Apache server-status
 server-info|/server-info|status|200|high|Apache server-info
 nginx-status|/nginx_status|status|200|high|Nginx status page
 elmah|/elmah.axd|status|200|high|ELMAH error log exposed
 trace-axd|/trace.axd|status|200|high|ASP.NET Trace exposed
-actuator-configprops|/actuator/configprops|status|200|high|Spring Actuator configuration properties exposed
-actuator-threaddump|/actuator/threaddump|status|200|high|Spring Actuator thread dump exposed
-actuator-loggers|/actuator/loggers|status|200|high|Spring Actuator loggers endpoint exposed
-actuator-metrics|/actuator/metrics|status|200|high|Spring Actuator metrics endpoint exposed
-actuator-prometheus|/actuator/prometheus|status|200|high|Prometheus metrics endpoint exposed
 heapdump|/heapdump|status|200|high|Heap dump endpoint exposed
 jolokia|/jolokia|status|200|high|Jolokia management endpoint exposed
 jmx-console|/jmx-console/|status|200|high|JMX console exposed
@@ -138,23 +253,246 @@ debug|/debug|status|200|high|Debug endpoint exposed
 debug-toolbar|/__debug__/|status|200|high|Django debug toolbar exposed
 laravel-telescope|/telescope|status|200|high|Laravel Telescope exposed
 laravel-horizon|/horizon|status|200|high|Laravel Horizon exposed
-openapi-json|/openapi.json|status|200|high|OpenAPI specification exposed
-openapi-yaml|/openapi.yaml|status|200|high|OpenAPI YAML specification exposed
-redoc|/redoc|status|200|high|ReDoc API documentation exposed
-api-docs-json|/api/docs|status|200|high|API documentation endpoint exposed
-backup-7z|/backup.7z|status|200|high|7z backup archive exposed
-backup-bz2|/backup.tar.bz2|status|200|high|Bzip2 backup archive exposed
-backup-xz|/backup.tar.xz|status|200|high|XZ backup archive exposed
-source-zip|/source.zip|status|200|high|Source code archive exposed
-source-tar|/source.tar|status|200|high|Source code archive exposed
-source-gz|/source.tar.gz|status|200|high|Source code archive exposed
-project-zip|/project.zip|status|200|high|Project archive exposed
-release-zip|/release.zip|status|200|high|Release archive exposed
-backup-old|/backup.old|status|200|high|Old backup file exposed
-backup-bak|/backup.bak|status|200|high|Backup file exposed
-database-bak|/database.bak|status|200|high|Database backup exposed
-database-sql-bak|/database.sql.bak|status|200|high|SQL backup exposed
-
+vite-fs|/@fs/|status|200|high|Vite filesystem endpoint (CVE related)
+next-data|/_next/data/|status|200|high|Next.js data directory
+nuxt-config|/nuxt.config.js|status|200|high|Nuxt configuration
+vite-config|/vite.config.js|status|200|high|Vite configuration
+webpack-config|/webpack.config.js|status|200|high|Webpack configuration
+tsconfig|/tsconfig.json|status|200|high|TypeScript configuration
+babel-config|/.babelrc|status|200|high|Babel configuration
+package-json|/package.json|status|200|high|package.json exposed
+composer-json|/composer.json|status|200|high|composer.json exposed
+dockerfile|/Dockerfile|status|200|high|Dockerfile exposed
+docker-compose|/docker-compose.yml|status|200|high|docker-compose.yml exposed
+docker-compose-yml|/docker-compose.yaml|status|200|high|docker-compose.yaml exposed
+procfile|/Procfile|status|200|high|Heroku Procfile
+app-yaml|/app.yaml|status|200|high|Google App Engine config
+serverless-yml|/serverless.yml|status|200|high|Serverless Framework config
+vercel-json|/vercel.json|status|200|high|Vercel configuration
+netlify-toml|/netlify.toml|status|200|high|Netlify configuration
+firebase-rc|/.firebaserc|status|200|high|Firebase RC file
+angular-json|/angular.json|status|200|high|Angular configuration
+vue-config|/vue.config.js|status|200|high|Vue configuration
+next-config|/next.config.js|status|200|high|Next.js configuration
+remix-config|/remix.config.js|status|200|high|Remix configuration
+svelte-config|/svelte.config.js|status|200|high|Svelte configuration
+astro-config|/astro.config.mjs|status|200|high|Astro configuration
+tailwind-config|/tailwind.config.js|status|200|high|Tailwind configuration
+postcss-config|/postcss.config.js|status|200|high|PostCSS configuration
+eslint-config|/.eslintrc|status|200|high|ESLint configuration
+prettier-config|/.prettierrc|status|200|high|Prettier configuration
+editorconfig|/.editorconfig|status|200|high|Editor configuration
+gitignore|/.gitignore|status|200|high|Gitignore file
+dockerignore|/.dockerignore|status|200|high|Dockerignore file
+npmignore|/.npmignore|status|200|high|npmignore file
+yarn-lock|/yarn.lock|status|200|high|yarn.lock exposed
+pnpm-lock|/pnpm-lock.yaml|status|200|high|pnpm-lock.yaml exposed
+package-lock|/package-lock.json|status|200|high|package-lock.json exposed
+composer-lock|/composer.lock|status|200|high|Composer lock file
+gemfile|/Gemfile|status|200|high|Gemfile exposed
+gemfile-lock|/Gemfile.lock|status|200|high|Gemfile.lock exposed
+requirements|/requirements.txt|status|200|high|requirements.txt exposed
+pipfile|/Pipfile|status|200|high|Pipfile exposed
+pipfile-lock|/Pipfile.lock|status|200|high|Pipfile.lock exposed
+go-mod|/go.mod|status|200|high|Go module definition
+go-sum|/go.sum|status|200|high|Go dependency checksums
+cargo-toml|/Cargo.toml|status|200|high|Rust Cargo.toml
+cargo-lock|/Cargo.lock|status|200|high|Rust Cargo.lock
+pom-xml|/pom.xml|status|200|high|Maven pom.xml
+build-gradle|/build.gradle|status|200|high|Gradle build file
+settings-gradle|/settings.gradle|status|200|high|Gradle settings
+makefile|/Makefile|status|200|high|Makefile exposed
+cmakelists|/CMakeLists.txt|status|200|high|CMakeLists exposed
+phpunit-xml|/phpunit.xml|status|200|high|PHPUnit config
+phpunit-dist|/phpunit.xml.dist|status|200|high|PHPUnit dist config
+jest-config|/jest.config.js|status|200|high|Jest configuration
+karma-config|/karma.conf.js|status|200|high|Karma configuration
+cypress-json|/cypress.json|status|200|high|Cypress configuration
+playwright-config|/playwright.config.js|status|200|high|Playwright configuration
+vitest-config|/vitest.config.js|status|200|high|Vitest configuration
+storybook|/storybook|status|200|high|Storybook exposed
+storybook-static|/storybook-static|status|200|high|Storybook static build
+coverage|/coverage|status|200|high|Code coverage directory
+nyc-output|/.nyc_output|status|200|high|NYC coverage output
+sonar-properties|/sonar-project.properties|status|200|high|SonarQube config
+.idea|/.idea/|status|200|high|IntelliJ IDEA directory
+.vscode|/.vscode/|status|200|high|VS Code settings
+.vs|/.vs/|status|200|high|Visual Studio directory
+.project|/.project|status|200|high|Eclipse project file
+.classpath|/.classpath|status|200|high|Eclipse classpath
+.settings|/.settings/|status|200|high|Eclipse settings
+nbproject|/nbproject|status|200|high|NetBeans project
+.DS_Store|/.DS_Store|status|200|high|macOS DS_Store
+Thumbs.db|/Thumbs.db|status|200|high|Windows Thumbs.db
+desktop-ini|/desktop.ini|status|200|high|Windows desktop.ini
+backup-sql-gz|/backup.sql.gz|status|200|high|Gzipped SQL backup
+db-sql-gz|/db.sql.gz|status|200|high|Gzipped DB dump
+dump-sql-gz|/dump.sql.gz|status|200|high|Gzipped dump
+site-sql-gz|/site.sql.gz|status|200|high|Gzipped site dump
+mysql-dump|/mysql.dump|status|200|high|MySQL dump file
+postgres-dump|/postgres.dump|status|200|high|PostgreSQL dump
+mongo-dump|/mongo.dump|status|200|high|MongoDB dump
+redis-rdb|/dump.rdb|status|200|high|Redis RDB dump
+elasticsearch|/elasticsearch|status|200|high|Elasticsearch endpoint
+kibana|/kibana|status|200|high|Kibana interface
+grafana|/grafana|status|200|high|Grafana dashboard
+prometheus|/prometheus|status|200|high|Prometheus endpoint
+jaeger|/jaeger|status|200|high|Jaeger tracing
+zipkin|/zipkin|status|200|high|Zipkin tracing
+solr|/solr/|status|200|high|Apache Solr
+jenkins|/jenkins|status|200|high|Jenkins CI
+jenkins-login|/jenkins/login|status|200|high|Jenkins login
+sonarqube|/sonarqube|status|200|high|SonarQube
+nexus|/nexus|status|200|high|Nexus repository
+artifactory|/artifactory|status|200|high|Artifactory
+harbor|/harbor|status|200|high|Harbor registry
+portainer|/portainer|status|200|high|Portainer Docker UI
+rancher|/rancher|status|200|high|Rancher UI
+kubernetes-dashboard|/kubernetes-dashboard|status|200|high|Kubernetes Dashboard
+minio|/minio|status|200|high|MinIO console
+s3-browser|/s3|status|200|high|S3 browser endpoint
+adminer|/adminer.php|status|200|high|Adminer exposed
+adminer2|/adminer|status|200|high|Adminer found
+phpmyadmin|/phpmyadmin|status|200|high|phpMyAdmin found
+pma|/pma|status|200|high|phpMyAdmin (pma)
+myadmin|/myadmin|status|200|high|MyAdmin found
+mysql|/mysql|status|200|high|MySQL panel
+dbadmin|/dbadmin|status|200|high|DB Admin panel
+pgadmin|/pgadmin/|status|200|high|pgAdmin found
+pgadmin4|/pgadmin4|status|200|high|pgAdmin4
+adminer-php|/adminer-4.8.1.php|status|200|high|Specific Adminer version
+phpminiadmin|/phpminiadmin.php|status|200|high|phpMiniAdmin
+sqlbuddy|/sqlbuddy|status|200|high|SQL Buddy
+webdb|/webdb|status|200|high|WebDB
+dbweb|/dbweb|status|200|high|DBWeb
+rockmongo|/rockmongo|status|200|high|RockMongo
+mongo-express|/mongo-express|status|200|high|Mongo Express
+redis-commander|/redis-commander|status|200|high|Redis Commander
+phpredmin|/phpredmin|status|200|high|PHPRedMin
+memcached|/memcached|status|200|high|Memcached status
+varnish|/varnish|status|200|high|Varnish status
+haproxy|/haproxy|status|200|high|HAProxy stats
+traefik|/traefik|status|200|high|Traefik dashboard
+consul|/consul|status|200|high|Consul UI
+vault|/vault|status|200|high|Vault UI
+nomad|/nomad|status|200|high|Nomad UI
+etcd|/etcd|status|200|high|etcd endpoint
+zookeeper|/zookeeper|status|200|high|Zookeeper
+kafka|/kafka|status|200|high|Kafka UI
+rabbitmq|/rabbitmq|status|200|high|RabbitMQ management
+activemq|/activemq|status|200|high|ActiveMQ
+celery|/celery|status|200|high|Celery flower
+flower|/flower|status|200|high|Flower monitoring
+sidekiq|/sidekiq|status|200|high|Sidekiq web
+resque|/resque|status|200|high|Resque web
+horizon-dashboard|/horizon/dashboard|status|200|high|Horizon dashboard
+telescope-dashboard|/telescope/requests|status|200|high|Telescope requests
+debugbar|/debugbar|status|200|high|PHP Debugbar
+clockwork|/clockwork|status|200|high|Clockwork debug
+tracy|/tracy|status|200|high|Tracy debugger
+whoops|/whoops|status|200|high|Whoops error page
+ignition|/_ignition|status|200|high|Laravel Ignition
+flare|/flare|status|200|high|Flare error tracking
+sentry|/sentry|status|200|high|Sentry
+bugsnag|/bugsnag|status|200|high|Bugsnag
+rollbar|/rollbar|status|200|high|Rollbar
+newrelic|/newrelic|status|200|high|New Relic
+datadog|/datadog|status|200|high|Datadog
+status-page|/status|status|200|high|Status page
+health-check|/health|status|200|high|Health check endpoint
+healthz|/healthz|status|200|high|Kubernetes healthz
+readyz|/readyz|status|200|high|Kubernetes readyz
+livez|/livez|status|200|high|Kubernetes livez
+metrics|/metrics|status|200|high|Metrics endpoint
+prometheus-metrics|/metrics/prometheus|status|200|high|Prometheus metrics
+stats|/stats|status|200|high|Stats endpoint
+info|/info|status|200|high|Info endpoint
+version|/version|status|200|high|Version endpoint
+env|/env|status|200|high|Environment endpoint
+config|/config|status|200|high|Config endpoint
+dump|/dump|status|200|high|Dump endpoint
+export|/export|status|200|high|Export endpoint
+download|/download|status|200|high|Download endpoint
+backup|/backup|status|200|high|Backup endpoint
+restore|/restore|status|200|high|Restore endpoint
+migrate|/migrate|status|200|high|Migration endpoint
+seed|/seed|status|200|high|Seeder endpoint
+console|/console|status|200|high|Console endpoint
+shell|/shell|status|200|high|Shell endpoint
+terminal|/terminal|status|200|high|Terminal endpoint
+cmd|/cmd|status|200|high|Command endpoint
+exec|/exec|status|200|high|Exec endpoint
+run|/run|status|200|high|Run endpoint
+eval|/eval|status|200|high|Eval endpoint
+php-eval|/php-eval|status|200|high|PHP eval endpoint
+cgi-bin|/cgi-bin/|status|200|high|CGI directory
+bin|/bin/|status|200|high|Bin directory
+scripts|/scripts/|status|200|high|Scripts directory
+tools|/tools/|status|200|high|Tools directory
+utils|/utils/|status|200|high|Utils directory
+util|/util/|status|200|high|Util directory
+helpers|/helpers/|status|200|high|Helpers directory
+lib|/lib/|status|200|high|Lib directory
+libs|/libs/|status|200|high|Libs directory
+vendor|/vendor/|status|200|high|Vendor directory
+node-modules|/node_modules|status|200|high|node_modules exposed
+bower-components|/bower_components|status|200|high|Bower components
+packages|/packages|status|200|high|Packages directory
+deps|/deps|status|200|high|Dependencies directory
+third-party|/third-party|status|200|high|Third-party directory
+external|/external|status|200|high|External directory
+includes|/includes|status|200|high|Includes directory
+include|/include|status|200|high|Include directory
+inc|/inc|status|200|high|Inc directory
+common|/common|status|200|high|Common directory
+shared|/shared|status|200|high|Shared directory
+core|/core|status|200|high|Core directory
+system|/system|status|200|high|System directory
+app|/app|status|200|high|App directory
+application|/application|status|200|high|Application directory
+src|/src|status|200|high|Source directory
+source|/source|status|200|high|Source directory
+sources|/sources|status|200|high|Sources directory
+code|/code|status|200|high|Code directory
+classes|/classes|status|200|high|Classes directory
+models|/models|status|200|high|Models directory
+controllers|/controllers|status|200|high|Controllers directory
+views|/views|status|200|high|Views directory
+templates|/templates|status|200|high|Templates directory
+layouts|/layouts|status|200|high|Layouts directory
+partials|/partials|status|200|high|Partials directory
+components|/components|status|200|high|Components directory
+modules|/modules|status|200|high|Modules directory
+plugins|/plugins|status|200|high|Plugins directory
+extensions|/extensions|status|200|high|Extensions directory
+addons|/addons|status|200|high|Addons directory
+themes|/themes|status|200|high|Themes directory
+skins|/skins|status|200|high|Skins directory
+assets|/assets|status|200|high|Assets directory
+static|/static|status|200|high|Static directory
+public|/public|status|200|high|Public directory
+media|/media|status|200|high|Media directory
+images|/images|status|200|high|Images directory
+img|/img|status|200|high|Img directory
+css|/css|status|200|high|CSS directory
+js|/js|status|200|high|JS directory
+fonts|/fonts|status|200|high|Fonts directory
+uploads|/uploads|status|200|high|Uploads directory
+upload|/upload|status|200|high|Upload directory
+files|/files|status|200|high|Files directory
+file|/file|status|200|high|File directory
+docs|/docs|status|200|high|Docs directory
+documentation|/documentation|status|200|high|Documentation
+api|/api|status|200|high|API endpoint
+api-v1|/api/v1|status|200|high|API v1
+api-v2|/api/v2|status|200|high|API v2
+api-v3|/api/v3|status|200|high|API v3
+rest|/rest|status|200|high|REST endpoint
+rpc|/rpc|status|200|high|RPC endpoint
+soap|/soap|status|200|high|SOAP endpoint
+ws|/ws|status|200|high|WebSocket endpoint
+websocket|/websocket|status|200|high|WebSocket
+socket|/socket|status|200|high|Socket endpoint
 
 # ====================== MEDIUM ======================
 admin|/admin|status|200|medium|Admin panel found
@@ -182,32 +520,141 @@ moderator|/moderator|status|200|medium|Moderator panel
 backend|/backend|status|200|medium|Backend panel
 control|/control|status|200|medium|Control panel
 console|/console|status|200|medium|Console found
-phpmyadmin|/phpmyadmin|status|200|medium|phpMyAdmin found
-pma|/pma|status|200|medium|phpMyAdmin (pma)
-myadmin|/myadmin|status|200|medium|MyAdmin found
-mysql|/mysql|status|200|medium|MySQL panel
-dbadmin|/dbadmin|status|200|medium|DB Admin panel
-adminer|/adminer.php|status|200|medium|Adminer exposed
-adminer2|/adminer|status|200|medium|Adminer found
-pgadmin|/pgadmin/|status|200|medium|pgAdmin found
 account|/account|status|200|medium|Account endpoint found
 accounts|/accounts|status|200|medium|Accounts endpoint found
 profile|/profile|status|200|medium|Profile endpoint found
 settings|/settings|status|200|medium|Settings endpoint found
-config|/config|status|200|medium|Configuration endpoint found
 control-panel|/control-panel|status|200|medium|Control panel found
 admin-dashboard|/admin/dashboard|status|200|medium|Admin dashboard found
 auth|/auth|status|200|medium|Authentication endpoint found
 oauth|/oauth|status|200|medium|OAuth endpoint found
 oauth-token|/oauth/token|status|200|medium|OAuth token endpoint found
-api|/api|status|200|medium|API endpoint found
-api-v1|/api/v1|status|200|medium|API v1 endpoint found
-api-v2|/api/v2|status|200|medium|API v2 endpoint found
-graphql-api|/api/graphql|status|200|medium|GraphQL API endpoint found
 swagger-ui|/swagger|status|200|medium|Swagger interface found
 docs|/docs|status|200|medium|API documentation endpoint found
 documentation|/documentation|status|200|medium|Documentation endpoint found
-
+superadmin|/superadmin|status|200|medium|Superadmin panel
+root-admin|/root|status|200|medium|Root admin
+sysadmin|/sysadmin|status|200|medium|Sysadmin panel
+webmaster|/webmaster|status|200|medium|Webmaster panel
+operator|/operator|status|200|medium|Operator panel
+staff|/staff|status|200|medium|Staff panel
+member|/member|status|200|medium|Member panel
+client|/client|status|200|medium|Client panel
+customer|/customer|status|200|medium|Customer panel
+portal|/portal|status|200|medium|Portal found
+intranet|/intranet|status|200|medium|Intranet
+extranet|/extranet|status|200|medium|Extranet
+private|/private|status|200|medium|Private area
+secure|/secure|status|200|medium|Secure area
+restricted|/restricted|status|200|medium|Restricted area
+internal|/internal|status|200|medium|Internal area
+cms|/cms|status|200|medium|CMS panel
+crm|/crm|status|200|medium|CRM panel
+erp|/erp|status|200|medium|ERP panel
+hrm|/hrm|status|200|medium|HRM panel
+pos|/pos|status|200|medium|POS system
+billing|/billing|status|200|medium|Billing panel
+payment|/payment|status|200|medium|Payment panel
+checkout|/checkout|status|200|medium|Checkout
+cart|/cart|status|200|medium|Cart
+order|/order|status|200|medium|Order panel
+orders|/orders|status|200|medium|Orders panel
+invoice|/invoice|status|200|medium|Invoice
+invoices|/invoices|status|200|medium|Invoices
+report|/report|status|200|medium|Report
+reports|/reports|status|200|medium|Reports
+analytics|/analytics|status|200|medium|Analytics
+stats|/stats|status|200|medium|Stats
+statistics|/statistics|status|200|medium|Statistics
+monitor|/monitor|status|200|medium|Monitor
+monitoring|/monitoring|status|200|medium|Monitoring
+log|/log|status|200|medium|Log viewer
+logs|/logs|status|200|medium|Logs viewer
+audit|/audit|status|200|medium|Audit log
+history|/history|status|200|medium|History
+activity|/activity|status|200|medium|Activity log
+notification|/notification|status|200|medium|Notification
+notifications|/notifications|status|200|medium|Notifications
+message|/message|status|200|medium|Message
+messages|/messages|status|200|medium|Messages
+mail|/mail|status|200|medium|Mail
+email|/email|status|200|medium|Email
+inbox|/inbox|status|200|medium|Inbox
+outbox|/outbox|status|200|medium|Outbox
+compose|/compose|status|200|medium|Compose mail
+send|/send|status|200|medium|Send
+receive|/receive|status|200|medium|Receive
+upload-form|/upload|status|200|medium|Upload form
+file-manager|/filemanager|status|200|medium|File manager
+files-manager|/files|status|200|medium|Files manager
+media-manager|/media|status|200|medium|Media manager
+image-manager|/images|status|200|medium|Image manager
+asset-manager|/assets|status|200|medium|Asset manager
+gallery|/gallery|status|200|medium|Gallery
+album|/album|status|200|medium|Album
+photo|/photo|status|200|medium|Photo
+video|/video|status|200|medium|Video
+audio|/audio|status|200|medium|Audio
+document|/document|status|200|medium|Document
+documents|/documents|status|200|medium|Documents
+download-center|/downloads|status|200|medium|Download center
+resource|/resource|status|200|medium|Resource
+resources|/resources|status|200|medium|Resources
+library|/library|status|200|medium|Library
+archive|/archive|status|200|medium|Archive
+storage|/storage|status|200|medium|Storage
+data|/data|status|200|medium|Data
+dataset|/dataset|status|200|medium|Dataset
+export-data|/export|status|200|medium|Export data
+import|/import|status|200|medium|Import
+sync|/sync|status|200|medium|Sync
+backup-manager|/backup|status|200|medium|Backup manager
+restore-manager|/restore|status|200|medium|Restore manager
+migration|/migration|status|200|medium|Migration
+setup|/setup|status|200|medium|Setup
+install|/install|status|200|medium|Install
+installer|/installer|status|200|medium|Installer
+upgrade|/upgrade|status|200|medium|Upgrade
+update|/update|status|200|medium|Update
+patch|/patch|status|200|medium|Patch
+maintenance|/maintenance|status|200|medium|Maintenance
+status|/status|status|200|medium|Status
+health|/health|status|200|medium|Health
+ping|/ping|status|200|medium|Ping
+ready|/ready|status|200|medium|Ready
+alive|/alive|status|200|medium|Alive
+version|/version|status|200|medium|Version
+about|/about|status|200|medium|About
+help|/help|status|200|medium|Help
+support|/support|status|200|medium|Support
+contact|/contact|status|200|medium|Contact
+feedback|/feedback|status|200|medium|Feedback
+ticket|/ticket|status|200|medium|Ticket
+tickets|/tickets|status|200|medium|Tickets
+faq|/faq|status|200|medium|FAQ
+wiki|/wiki|status|200|medium|Wiki
+knowledge|/knowledge|status|200|medium|Knowledge base
+kb|/kb|status|200|medium|KB
+forum|/forum|status|200|medium|Forum
+community|/community|status|200|medium|Community
+blog|/blog|status|200|medium|Blog
+news|/news|status|200|medium|News
+press|/press|status|200|medium|Press
+media-center|/media-center|status|200|medium|Media center
+press-release|/press-release|status|200|medium|Press release
+career|/career|status|200|medium|Career
+careers|/careers|status|200|medium|Careers
+job|/job|status|200|medium|Job
+jobs|/jobs|status|200|medium|Jobs
+recruit|/recruit|status|200|medium|Recruit
+hiring|/hiring|status|200|medium|Hiring
+partner|/partner|status|200|medium|Partner
+partners|/partners|status|200|medium|Partners
+affiliate|/affiliate|status|200|medium|Affiliate
+reseller|/reseller|status|200|medium|Reseller
+vendor-portal|/vendor|status|200|medium|Vendor portal
+supplier|/supplier|status|200|medium|Supplier
+distributor|/distributor|status|200|medium|Distributor
 
 # ====================== LOW / INFO ======================
 robots|/robots.txt|status|200|low|robots.txt found
@@ -223,10 +670,6 @@ readme-html|/README.html|status|200|low|README.html found
 changelog|/CHANGELOG.md|status|200|low|CHANGELOG.md found
 license|/LICENSE|status|200|low|LICENSE file found
 license-md|/LICENSE.md|status|200|low|LICENSE.md found
-package-json|/package.json|status|200|low|package.json exposed
-composer-json|/composer.json|status|200|low|composer.json exposed
-dockerfile|/Dockerfile|status|200|low|Dockerfile exposed
-docker-compose|/docker-compose.yml|status|200|low|docker-compose.yml exposed
 old|/old|status|200|low|Old directory
 backup|/backup|status|200|low|Backup directory
 temp|/temp|status|200|low|Temp directory
@@ -294,3 +737,119 @@ source|/source|status|200|low|Source directory found
 dist|/dist|status|200|low|Distribution directory found
 build|/build|status|200|low|Build directory found
 cgi-bin|/cgi-bin/|status|200|low|CGI directory found
+.well-known-acme|/.well-known/acme-challenge/|status|200|low|ACME challenge directory
+.well-known-change|/.well-known/change-password|status|200|low|Change password well-known
+.well-known-openid|/.well-known/openid-configuration|status|200|low|OpenID configuration
+.well-known-oauth|/.well-known/oauth-authorization-server|status|200|low|OAuth authorization server
+.well-known-jwks|/.well-known/jwks.json|status|200|low|JWKS endpoint
+.well-known-assetlinks|/.well-known/assetlinks.json|status|200|low|Android asset links
+.well-known-apple|/.well-known/apple-app-site-association|status|200|low|Apple app site association
+ads-txt|/ads.txt|status|200|low|ads.txt found
+app-ads|/app-ads.txt|status|200|low|app-ads.txt found
+security-txt-alt|/security.txt|status|200|low|security.txt alternative
+humans-txt|/humans.txt|status|200|low|humans.txt
+keybase|/keybase.txt|status|200|low|Keybase proof
+pgp-key|/pgp-key.txt|status|200|low|PGP key
+ssh-key|/ssh-key.txt|status|200|low|SSH key public
+public-key|/public-key.asc|status|200|low|Public key ASC
+robots-txt|/robots.txt|status|200|low|robots.txt
+sitemap-index|/sitemap_index.xml|status|200|low|Sitemap index
+sitemap-xml|/sitemap.xml|status|200|low|Sitemap XML
+rss|/rss|status|200|low|RSS feed
+atom|/atom|status|200|low|Atom feed
+feed|/feed|status|200|low|Feed
+opensearch|/opensearch.xml|status|200|low|OpenSearch description
+browserconfig|/browserconfig.xml|status|200|low|Browser config
+manifest-web|/site.webmanifest|status|200|low|Web app manifest
+manifest-json|/manifest.json|status|200|low|Manifest JSON
+service-worker|/service-worker.js|status|200|low|Service worker
+sw-js|/sw.js|status|200|low|Service worker JS
+offline|/offline.html|status|200|low|Offline page
+404|/404.html|status|200|low|Custom 404
+500|/500.html|status|200|low|Custom 500
+error|/error.html|status|200|low|Error page
+maintenance|/maintenance.html|status|200|low|Maintenance page
+coming-soon|/coming-soon|status|200|low|Coming soon page
+under-construction|/under-construction|status|200|low|Under construction
+test-page|/test.html|status|200|low|Test page
+demo-page|/demo.html|status|200|low|Demo page
+sample|/sample|status|200|low|Sample
+example|/example|status|200|low|Example
+placeholder|/placeholder|status|200|low|Placeholder
+tmp-dir|/tmp/|status|200|low|Tmp directory
+temp-dir|/temp/|status|200|low|Temp directory
+cache-dir|/cache/|status|200|low|Cache directory
+log-dir|/log/|status|200|low|Log directory
+logs-dir|/logs/|status|200|low|Logs directory
+backup-dir|/backup/|status|200|low|Backup directory
+backups-dir|/backups/|status|200|low|Backups directory
+old-dir|/old/|status|200|low|Old directory
+new-dir|/new/|status|200|low|New directory
+dev-dir|/dev/|status|200|low|Dev directory
+test-dir|/test/|status|200|low|Test directory
+staging-dir|/staging/|status|200|low|Staging directory
+beta-dir|/beta/|status|200|low|Beta directory
+alpha-dir|/alpha/|status|200|low|Alpha directory
+preview-dir|/preview/|status|200|low|Preview directory
+sandbox-dir|/sandbox/|status|200|low|Sandbox directory
+lab-dir|/lab/|status|200|low|Lab directory
+playground|/playground|status|200|low|Playground
+sandbox|/sandbox|status|200|low|Sandbox
+lab|/lab|status|200|low|Lab
+experiment|/experiment|status|200|low|Experiment
+prototype|/prototype|status|200|low|Prototype
+poc|/poc|status|200|low|Proof of concept
+mvp|/mvp|status|200|low|MVP
+alpha|/alpha|status|200|low|Alpha
+beta|/beta|status|200|low|Beta
+rc|/rc|status|200|low|Release candidate
+release|/release|status|200|low|Release
+production|/production|status|200|low|Production
+prod|/prod|status|200|low|Prod
+live|/live|status|200|low|Live
+www|/www|status|200|low|WWW
+web|/web|status|200|low|Web
+site|/site|status|200|low|Site
+homepage|/homepage|status|200|low|Homepage
+home|/home|status|200|low|Home
+index|/index|status|200|low|Index
+main|/main|status|200|low|Main
+default|/default|status|200|low|Default
+start|/start|status|200|low|Start
+welcome|/welcome|status|200|low|Welcome
+landing|/landing|status|200|low|Landing
+splash|/splash|status|200|low|Splash
+intro|/intro|status|200|low|Intro
+onboarding|/onboarding|status|200|low|Onboarding
+tutorial|/tutorial|status|200|low|Tutorial
+guide|/guide|status|200|low|Guide
+manual|/manual|status|200|low|Manual
+handbook|/handbook|status|200|low|Handbook
+reference|/reference|status|200|low|Reference
+api-ref|/api-ref|status|200|low|API reference
+swagger-ui-alt|/swagger-ui|status|200|low|Swagger UI alt
+redoc-alt|/redoc|status|200|low|ReDoc alt
+postman|/postman|status|200|low|Postman collection
+insomnia|/insomnia|status|200|low|Insomnia collection
+openapi|/openapi|status|200|low|OpenAPI
+graphql-schema|/graphql/schema|status|200|low|GraphQL schema
+schema|/schema|status|200|low|Schema
+idl|/idl|status|200|low|IDL
+proto|/proto|status|200|low|Protobuf
+thrift|/thrift|status|200|low|Thrift
+avro|/avro|status|200|low|Avro
+parquet|/parquet|status|200|low|Parquet
+csv|/csv|status|200|low|CSV data
+json|/json|status|200|low|JSON data
+xml|/xml|status|200|low|XML data
+yaml|/yaml|status|200|low|YAML data
+toml|/toml|status|200|low|TOML data
+ini|/ini|status|200|low|INI data
+conf|/conf|status|200|low|Conf directory
+cfg|/cfg|status|200|low|Cfg directory
+etc|/etc|status|200|low|Etc directory
+opt|/opt|status|200|low|Opt directory
+usr|/usr|status|200|low|Usr directory
+var|/var|status|200|low|Var directory
+tmpfs|/tmpfs|status|200|low|Tmpfs
+ramdisk|/ramdisk|status|200|low|Ramdisk
