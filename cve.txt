@@ -1,0 +1,74 @@
+# ====================== CVE / KNOWN VULNERABLE ======================
+# PHPUnit RCE (CVE-2017-9841) - still heavily scanned
+phpunit-eval|/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval2|/vendor/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval3|/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval4|/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval5|/laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval6|/api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval7|/admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval8|/backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval9|/public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval10|/app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval11|/cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval12|/blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-eval13|/wp-content/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php|status|200|critical|PHPUnit RCE CVE-2017-9841
+phpunit-phar|/vendor/phpunit/phpunit/phpunit.phar|status|200|high|PHPUnit phar
+
+# Vite arbitrary file read / path traversal (CVE-2025-30208, CVE-2025-46565, related)
+vite-fs-env|/@fs/.env|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-env2|/@fs/../.env|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-env3|/@fs/../../.env|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-passwd|/@fs/etc/passwd|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-proc|/@fs/proc/self/environ|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-aws|/@fs/root/.aws/credentials|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-aws2|/@fs/home/ubuntu/.aws/credentials|status|200|critical|Vite /@fs/ LFI (CVE)
+vite-fs-raw|/@fs/.env?raw|status|200|critical|Vite /@fs/ LFI with query bypass
+vite-fs-raw2|/@fs/../.env?raw??|status|200|critical|Vite /@fs/ LFI query bypass
+vite-fs-raw3|/@fs/etc/passwd?raw??|status|200|critical|Vite /@fs/ LFI query bypass
+
+# Spring Cloud Config / Actuator related (path traversal & sensitive)
+spring-config|/config|status|200|high|Spring Cloud Config possible path traversal
+spring-config-app|/application|status|200|high|Spring Cloud Config
+spring-config-app2|/application/default|status|200|high|Spring Cloud Config
+spring-config-env|/env|status|200|high|Spring Actuator /env (sensitive)
+spring-config-heap|/actuator/heapdump|status|200|critical|Spring Actuator heapdump (CVE related)
+spring-config-gateway|/actuator/gateway/routes|status|200|high|Spring Cloud Gateway actuator
+spring-config-jolokia|/jolokia|status|200|high|Jolokia (often with Spring)
+spring-config-jolokia2|/actuator/jolokia|status|200|high|Jolokia actuator
+
+# Apache Solr (multiple RCE / info leak CVEs)
+solr-admin|/solr/admin|status|200|high|Apache Solr admin
+solr-admin2|/solr/#/|status|200|high|Apache Solr UI
+solr-select|/solr/select|status|200|high|Apache Solr select
+solr-config|/solr/admin/info/system|status|200|high|Apache Solr system info
+solr-cores|/solr/admin/cores|status|200|high|Apache Solr cores
+
+# Jenkins (multiple RCE CVEs)
+jenkins-script|/script|status|200|critical|Jenkins Script Console (RCE if unauth)
+jenkins-script2|/jenkins/script|status|200|critical|Jenkins Script Console
+jenkins-cli|/cli|status|200|high|Jenkins CLI
+jenkins-asynchPeople|/asynchPeople|status|200|high|Jenkins
+jenkins-scriptText|/scriptText|status|200|critical|Jenkins scriptText
+
+# Confluence / Atlassian (several RCE CVEs)
+confluence-rest|/rest/|status|200|high|Confluence REST API
+confluence-setup|/setup/setupadministrator.action|status|200|high|Confluence setup
+confluence-login|/login.action|status|200|medium|Confluence login
+confluence-spaces|/spaces/viewspacesummary.action|status|200|high|Confluence spaces
+
+# Struts / classic
+struts-action|/struts/webconsole.html|status|200|high|Struts console
+struts-devmode|/struts/webconsole.html|status|200|high|Struts devMode
+
+# Other frequently exploited / CVE-related
+cgi-bin-printenv|/cgi-bin/printenv|status|200|high|CGI printenv
+cgi-bin-test|/cgi-bin/test-cgi|status|200|high|CGI test
+composer-phar|/composer.phar|status|200|high|Composer phar
+wp-cron|/wp-cron.php|status|200|medium|WordPress cron
+xmlrpc|/xmlrpc.php|status|200|medium|WordPress xmlrpc (brute / amplification)
+drupal-cron|/cron.php|status|200|medium|Drupal cron
+drupal-install|/install.php|status|200|high|Drupal install
+joomla-admin|/administrator/index.php|status|200|medium|Joomla admin
+magento-downloader|/downloader|status|200|high|Magento downloader
+magento-rss|/index.php/rss/order/new|status|200|high|Magento RSS

@@ -754,7 +754,6 @@ ssh-key|/ssh-key.txt|status|200|low|SSH key public
 public-key|/public-key.asc|status|200|low|Public key ASC
 robots-txt|/robots.txt|status|200|low|robots.txt
 sitemap-index|/sitemap_index.xml|status|200|low|Sitemap index
-sitemap-xml|/sitemap.xml|status|200|low|Sitemap XML
 rss|/rss|status|200|low|RSS feed
 atom|/atom|status|200|low|Atom feed
 feed|/feed|status|200|low|Feed
