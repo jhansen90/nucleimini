@@ -24,7 +24,21 @@ https://target.com
 
 Hasil pemindaian akan disimpan pada:
 
-hasil.txx
+hasil.txt
+
+run tools subfinder
+
+python subfinder.py example.com -o subdo.txt ( biasa )
+
+python subfinder.py example.com -b  -o subdo.txt ( dns brute force )
+
+di sini ada untuk mau dns brute force 
+
+run filter 
+
+python python filter.py -f subdo.txt -o live.txt
+
+untuk ngefilter website mana yang hidup dan mana yang mati
 
 ⚠️ WARNING
 
